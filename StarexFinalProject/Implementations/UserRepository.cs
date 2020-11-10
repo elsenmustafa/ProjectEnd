@@ -13,23 +13,24 @@ namespace StarexFinalProject.Implementations
 {
     public class UserRepository : IUserRepository
     {
-       
+
         public IdentityResult Create(UserViewModel userViewModel)
         {
             AppUsers users = new AppUsers()
             {
-                AppUserId=userViewModel.AppUserId,
-                Name=userViewModel.Name,
-                Surname=userViewModel.Surname,
-                Gender=userViewModel.Gender,
-                BirthDate=userViewModel.BirthDate,
-                Adress=userViewModel.Adress,
-                WareHousesId=userViewModel.WareHousesId,
-                GovIdPrefix=userViewModel.GovIdPrefix,
-                GovId=userViewModel.GovId,
-                FIN=userViewModel.FIN
+                AppUserId = userViewModel.AppUserId,
+                Name = userViewModel.Name,
+                Surname = userViewModel.Surname,
+                Gender = userViewModel.Gender,
+                BirthDate = userViewModel.BirthDate,
+                Adress = userViewModel.Adress,
+                WareHousesId = userViewModel.WareHousesId,
+                GovIdPrefix = userViewModel.GovIdPrefix,
+                GovId = userViewModel.GovId,
+                FIN = userViewModel.FIN
             };
-            
+            return null;
+
         }
 
         public UserViewModel GetById(string id)
