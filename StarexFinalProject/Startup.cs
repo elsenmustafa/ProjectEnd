@@ -27,16 +27,7 @@ namespace StarexFinalProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //    services.AddDbContext<StarexDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("StarexProject")));
-            //    services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<StarexDbContext>();
-            //    services.AddIdentity<AppUsers, IdentityRole>(
-            //       option =>
-            //       {
-            //           option.Password.RequireUppercase = false;
-            //           option.Password.RequireNonAlphanumeric = false;
 
-
-            //       }).AddEntityFrameworkStores<StarexDbContext>();
             services.AddControllersWithViews();
             services.AddDbContext<StarexDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("StarexProject")));
             services.AddIdentity<AppUsers, IdentityRole>()
