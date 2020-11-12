@@ -28,7 +28,7 @@ namespace StarexFinalProject
         {
             services.AddControllersWithViews();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(); 
             services.AddDbContext<StarexDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("StarexProject")));
             services.AddIdentity<AppUsers, IdentityRole>()
                 .AddEntityFrameworkStores<StarexDbContext>()
